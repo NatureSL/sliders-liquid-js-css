@@ -1,0 +1,151 @@
+<div class="test__container page-width">
+  {% render 'test-circle-svg' %}
+
+  <div class="test__text-wrapper ">
+    <span class="test__text-first">Text one</span>
+    <span class="test__text-others">Text two</span>
+    <span class="test__text-others">Text three</span>
+    {% render 'test-circle-svg-big' %}
+  </div>
+  {% render 'test-curve-line' %}
+
+  <div class="test__kit-wrapper">
+    <img class="test__img" src="{{ 'Mask_group.png' | file_img_url: '1583x940' }}" alt="Cute Cat">
+  </div>
+
+  <div class="test__btn-wrapper"><button class="test__btn" type="submit">Learn More</button></div>
+</div>
+<style>
+          .test__container{
+              position: relative;
+              overflow: hidden;
+              max-width: 1024px;
+              margin: 0 auto;
+              font-family: 'Nunito', sans-serif;
+
+          }
+          .test__svg-circle{
+              position: absolute;
+              top: 64px;
+              left: 0;
+          }
+          .test__text-wrapper{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              line-height: 120%;
+              padding-top: 66px;
+              margin-bottom: 10px;
+          }
+          .test__text-first{
+              font-size: 50px;
+              color:#664535;
+              font-weight: 800;
+              line-height: normal;
+          }
+          .test__text-others{
+              color: #75C882;
+              font-size: 47px;
+              font-weight: 800;
+              line-height: normal;
+          }
+          .test__curve-line{
+              display: flex;
+              justify-content: center;
+              align-self: center;
+              margin: 0 auto 100px;
+          }
+        .test__kit-wrapper{
+              margin: 0 auto 94px;
+              padding: 0 5%;
+          }
+        .test__img{
+              position: relative;
+              z-index: 2;
+              max-width: 100%;
+              border-radius: 25px;
+          }
+        .test__btn{
+              border-radius: 56.655px;
+              border: 5px solid #75C882;
+              color: #75C882;
+              font-size: 47.318px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: normal;
+              padding: 15px 40px;
+              display: block;
+              background-color: #fff;
+              cursor:pointer;
+          }
+       .test__btn-wrapper{
+              display: flex;
+              justify-content: center;
+              margin-bottom: 100px;
+
+  }
+        .test__svg-circle-big{
+      display: none;
+  }
+          @media screen and (min-width: 1024px) {
+              .test__svg-circle{
+                  display: none;
+              }
+              .test__curve-line{
+              display: none;
+              }
+              .test__container{
+                  max-width: 1640px;
+                  min-height: 787px;
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  grid-template-rows: auto auto; /* Две строки */
+                  column-gap: 20px; /* Промежуток между элементами */
+                  row-gap: 0;
+              }
+              .test__kit-wrapper{
+                  grid-column: 1;
+                  grid-row: 1 / 4;
+                  max-width: 795px;
+                  max-height: 470px;
+                  align-self: center;
+                  justify-self: center;
+                  padding: 0;
+              }
+              .test__text-wrapper {
+                  position: relative;
+                  grid-column: 2; /* Вторая колонка */
+                  grid-row: 1; /* Занимает первую строку */
+                  margin: 0;
+                  padding-top: 47px;
+                  justify-content: end;
+                  margin: 0 0 26px;
+
+              }
+              .test__text-wrapper span {
+                  font-size: 80px;
+              }
+              .test__btn {
+                  align-self: center;
+              }
+              .test__btn-wrapper{
+                  grid-column: 2; /* Вторая колонка */
+                  grid-row: 2; /* Занимает вторую строку */
+                  display: flex;
+                  justify-content: start;
+                  margin: auto;
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: start;
+                  flex-direction: column;
+              }
+              .test__svg-circle-big{
+                  display: block;
+                  position: absolute;
+                  top: 2%;
+              }
+
+      }
+</style>
